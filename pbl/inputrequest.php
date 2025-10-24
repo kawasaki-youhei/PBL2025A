@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 // セッションチェック
 if (!isset($_SESSION['name'])) {
-    header('Location: staff_login.php');
+    header('Location: login.php');
     exit();
 }
 
@@ -92,7 +92,7 @@ $department = $_SESSION['department'];
 </head>
 <body>
 <div class="header">
-    <a href="/pbl/style/home.php"><h1>愛媛新聞社 シフト管理システム</h1></a>
+    <a href="/pbl/home.php"><h1>愛媛新聞社 シフト管理システム</h1></a>
 </div>
 <button>設定</button>
 <div class="logout">
@@ -106,6 +106,8 @@ $department = $_SESSION['department'];
     <label for="department">部署を選択:</label>
     <select id="department" name="department">
         <option value="digitalstreaming">部署Ａ</option>
+        <option value="systemrotation">部署B</option>
+        <option value="renewspaper">部署C</option>
     </select>
     <label for="year">年を選択：</label>
     <select id="year" name="year" onchange="updateDays()">

@@ -1323,8 +1323,8 @@ current_datetime_jst = current_datetime_utc.astimezone(japan_timezone)
 # 指定のフォーマットで日時を文字列に変換
 formatted_datetime = current_datetime_jst.strftime("%Y%m%d_%H%M%S")
 output_filename = f"news_result_year{year}_month{month}_{formatted_datetime}.csv"
-df.T.to_csv("./data/" + output_filename, encoding="utf-8")
-df.T.to_csv("./data/dl/" + output_filename, encoding="shift_jis")
+df.T.to_csv("../data/" + output_filename, encoding="utf-8")
+df.T.to_csv("../data/dl/" + output_filename, encoding="shift_jis")
 
 f = open("searchpath.txt", 'w')
 f.write(output_filename)
